@@ -15,12 +15,14 @@ configurations {
 }
 
 repositories {
-    maven { url 'https://repo.spring.io/milestone' }
+    maven { url "https://repo.spring.io/milestone" }
     mavenCentral()
 }
 
 dependencies {
     implementation "org.springframework.boot:spring-boot-starter:${springBootVersion}"
+    implementation "org.springframework.boot:spring-boot-starter-webflux:${springBootVersion}"
+
     compileOnly "org.projectlombok:lombok"
     annotationProcessor "org.projectlombok:lombok"
     testImplementation "org.springframework.boot:spring-boot-starter-test"
