@@ -5,4 +5,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'random-quote-generator'
+rootProject.name = 'random-quotes-web'

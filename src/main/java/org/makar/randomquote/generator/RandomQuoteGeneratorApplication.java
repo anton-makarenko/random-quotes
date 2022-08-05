@@ -1,4 +1,4 @@
-package org.makar.spring3training;
+package org.makar.randomquote.generator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

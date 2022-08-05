@@ -1,4 +1,4 @@
-package org.makar.spring3training;
+package org.makar.randomquote.generator;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
