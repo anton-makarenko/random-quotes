@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Spring3TrainingApplication {
+public class RandomQuoteGeneratorApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Spring3TrainingApplication.class, args);
+        SpringApplication.run(RandomQuoteGeneratorApplication.class, args);
     }
 
 }
