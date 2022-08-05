@@ -6,4 +6,4 @@ COPY build/libs/random-quotes-web-1.0.0.jar /opt/random-quotes-web
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "/opt/spring3-training/random-quotes-web.jar"]
+ENTRYPOINT ["java", "-jar", "/opt/random-quotes-web/random-quotes-web-1.0.0.jar"]

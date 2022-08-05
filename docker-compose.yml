@@ -1,0 +1,18 @@
+version: '3.9'
+services:
+  web:
+    image: 'antonmakarenko/random-quotes-web:1.0.0'
+    ports:
+      - '8080:8080'
+
+  downloader:
+    image: 'antonmakarenko/random-quotes-downloader:1.0.0'
+    ports:
+      - '8081:8081'
+
+  data:
+    image: 'antonmakarenko/random-quotes-data:empty'
+    ports:
+      - '5432:5432'
+    volumes:
+      - 'E:/postgresql/data:/var/lib/postgresql/data'
