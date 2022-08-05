@@ -5,4 +5,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'spring3-training'
+rootProject.name = 'random-quote-generator'

@@ -1,9 +1,9 @@
-FROM amazoncorretto:17.0.3
+FROM amazoncorretto:17.0.4
 
-RUN mkdir /opt/spring3-training
+RUN mkdir /opt/random-quote-generator
 
-COPY build/libs/spring3-training-0.0.1.jar /opt/spring3-training
+COPY build/libs/random-quote-generator-0.0.1.jar /opt/random-quote-generator
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "/opt/spring3-training/spring3-training-0.0.1.jar"]
+ENTRYPOINT ["java", "-jar", "/opt/spring3-training/random-quote-generator-0.0.1.jar"]
