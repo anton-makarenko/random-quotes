@@ -11,8 +11,8 @@ public class QuoteMapper implements Mapper<Quote, QuoteDto> {
     public QuoteDto toDto(Quote quote) {
         QuoteDto quoteDto = new QuoteDto();
         quoteDto.setQuote(quote.getQuote());
-        quoteDto.setAuthorName(quote.getAuthor().getName());
-        quoteDto.setAuthorSurname(quote.getAuthor().getSurname());
+        quoteDto.setAuthorsName(quote.getAuthor().getName());
+        quoteDto.setAuthorsSurname(quote.getAuthor().getSurname());
         return quoteDto;
     }
 }
