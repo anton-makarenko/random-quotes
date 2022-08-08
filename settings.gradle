@@ -5,4 +5,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'random-quotes-webflux'
+rootProject.name = 'random-quotes-api'
