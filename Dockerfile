@@ -1,9 +1,9 @@
 FROM amazoncorretto:17.0.4
 
-RUN mkdir /opt/random-quotes-web
+RUN mkdir /opt/random-quotes-api
 
-COPY build/libs/random-quotes-web-1.0.0.jar /opt/random-quotes-web
+COPY build/libs/random-quotes-api-1.0.0.jar /opt/random-quotes-api
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "/opt/random-quotes-web/random-quotes-web-1.0.0.jar"]
+ENTRYPOINT ["java", "-jar", "/opt/random-quotes-api/random-quotes-api-1.0.0.jar"]

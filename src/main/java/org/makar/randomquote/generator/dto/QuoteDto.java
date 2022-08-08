@@ -5,6 +5,5 @@ import lombok.Data;
 @Data
 public class QuoteDto {
     private String quote;
-    private String authorsName;
-    private String authorsSurname;
+    private AuthorDto author;
 }

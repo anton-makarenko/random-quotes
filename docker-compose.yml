@@ -1,7 +1,7 @@
 version: '3.9'
 services:
-  web:
-    image: 'antonmakarenko/random-quotes-web:1.0.0'
+  api:
+    image: 'antonmakarenko/random-quotes-api:1.0.0'
     ports:
       - '8080:8080'
 
@@ -14,5 +14,5 @@ services:
     image: 'antonmakarenko/random-quotes-data:14.4'
     ports:
       - '5432:5432'
-    volumes:
-      - 'E:/Docker/random-quotes/postgresql/data:/var/lib/postgresql/data'
+#    volumes:
+#      - 'E:/Docker/random-quotes/postgresql/data:/var/lib/postgresql/data'
