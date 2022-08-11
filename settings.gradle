@@ -6,4 +6,4 @@ pluginManagement {
 }
 
 rootProject.name = 'random-quotes'
-include 'api'
+include 'api', 'downloader'

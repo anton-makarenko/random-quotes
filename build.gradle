@@ -37,9 +37,7 @@ subprojects {
         implementation "org.postgresql:postgresql:${postgresDriverVersion}"
         implementation project(":")
     }
-}
 
-project("api") {
     bootJar {
         enabled = true
     }
