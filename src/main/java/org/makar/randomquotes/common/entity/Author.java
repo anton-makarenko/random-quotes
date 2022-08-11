@@ -1,4 +1,4 @@
-package org.makar.randomquote.generator.entity;
+package org.makar.randomquotes.common.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;

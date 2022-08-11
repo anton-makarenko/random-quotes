@@ -1,6 +1,5 @@
-package org.makar.randomquote.generator.entity;
+package org.makar.randomquotes.common.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

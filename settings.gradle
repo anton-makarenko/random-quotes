@@ -5,4 +5,5 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'random-quotes-api'
+rootProject.name = 'random-quotes'
+include 'api'

@@ -4,13 +4,49 @@ plugins {
     id "java"
 }
 
-group = "org.makar"
-version = "1.0.0"
-sourceCompatibility = "17"
+allprojects {
+    group = 'org.makar.randomquotes'
+    version = '1.0.0'
+    sourceCompatibility = '17'
 
-repositories {
-    maven { url "https://repo.spring.io/milestone" }
-    mavenCentral()
+    apply plugin: "java"
+    apply plugin: "io.spring.dependency-management"
+    apply plugin: "org.springframework.boot"
+
+    repositories {
+        maven { url "https://repo.spring.io/milestone" }
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation "org.springframework.boot:spring-boot-starter:${springBootVersion}"
+        implementation "org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}"
+        compileOnly "org.projectlombok:lombok:${lombokVersion}"
+        annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+        testImplementation "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
+    }
+}
+
+subprojects {
+    apply plugin: "java"
+    apply plugin: "io.spring.dependency-management"
+    apply plugin: "org.springframework.boot"
+
+    dependencies {
+        implementation "org.springframework.boot:spring-boot-starter-webflux:${springBootVersion}"
+        implementation "org.postgresql:postgresql:${postgresDriverVersion}"
+        implementation project(":")
+    }
+}
+
+project("api") {
+    bootJar {
+        enabled = true
+    }
+}
+
+bootJar {
+    enabled = false
 }
 
 configurations {
@@ -19,36 +55,6 @@ configurations {
     }
 }
 
-dependencies {
-    implementation "org.springframework.boot:spring-boot-starter:${springBootVersion}"
-    implementation "org.springframework.boot:spring-boot-starter-webflux:${springBootVersion}"
-    implementation "org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}"
-    implementation "org.postgresql:postgresql:${postgresDriverVersion}"
-
-
-
-    compileOnly "org.projectlombok:lombok:${lombokVersion}"
-    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
-    testImplementation "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
-}
-
 tasks.named("test") {
     useJUnitPlatform()
 }
-
-//I have no idea why this does not work
-//jar {
-//    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-//
-//    manifest {
-//        attributes "Main-Class": "org.makar.spring3training.Spring3TrainingApplication"
-//    }
-//
-//    from {
-//        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-//    }
-//
-//    exclude "META-INF/*.RSA"
-//    exclude "META-INF/*.SF"
-//    exclude "META-INF/*.DSA"
-//}
