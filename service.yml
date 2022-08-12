@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: random-quotes-service
+  labels:
+    app: eks-sample-windows-app
+spec:
+  selector:
+    app: eks-sample-windows-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

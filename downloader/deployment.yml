@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: random-quotes-downloader
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: random-quotes-downloader
+  template:
+    metadata:
+      labels:
+        app: random-quotes-downloader
+    spec:
+      containers:
+        - name: random-quotes-downloader
+          image: antonmakarenko/random-quotes-downloader:1.0.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8081

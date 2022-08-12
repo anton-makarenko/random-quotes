@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: random-quotes-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: random-quotes-api
+  template:
+    metadata:
+      labels:
+        app: random-quotes-api
+    spec:
+      containers:
+        - name: random-quotes-api
+          image: antonmakarenko/random-quotes-api:1.0.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
