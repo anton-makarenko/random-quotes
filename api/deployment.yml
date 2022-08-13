@@ -17,4 +17,4 @@ spec:
           image: antonmakarenko/random-quotes-api:1.0.0
           imagePullPolicy: Always
           ports:
-            - containerPort: 8080
+            - containerPort: 8443
